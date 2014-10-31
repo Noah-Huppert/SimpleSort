@@ -57,18 +57,19 @@ public class SimpleSortMain {
 	
 	// main test harness
 	public static void main(String[] args) {
-		int[] a1 = {0, 3, 7, 7, 9};
+		/*int[] a1 = {0, 3, 7, 7, 9};
 		int[] a2 = randomArray(10);
         int[] a3 = randomArray(10);
-        int[] a4 = randomArray(10);
+        int[] a4 = randomArray(10);*/
+		int[] a4 = {2, 8, 2, 5, 2, 8, 2};
 		
-		SimpleSorterAbstract sorter1 = new CheatSorter();
+		/*SimpleSorterAbstract sorter1 = new CheatSorter();
         SimpleSorterAbstract sorter2 = new MySorter();
         SimpleSorterAbstract sorter3 = new Quicksort();
 		testSort("Static array", a1, null);
 		testSort("CheatSorter", a2, sorter1);
-        testSort("MySorter", a3, sorter2);
-        testSort("BetterSorter", a4, sorter3);
+        testSort("MySorter", a3, sorter2);*/
+        testSort("BetterSorter", a4, new Quicksort());
 	}
 
 }
