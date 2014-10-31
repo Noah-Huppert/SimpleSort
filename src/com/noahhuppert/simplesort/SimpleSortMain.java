@@ -64,7 +64,7 @@ public class SimpleSortMain {
 		
 		SimpleSorterAbstract sorter1 = new CheatSorter();
         SimpleSorterAbstract sorter2 = new MySorter();
-        SimpleSorterAbstract sorter3 = new BetterSorter();
+        SimpleSorterAbstract sorter3 = new Quicksort();
 		testSort("Static array", a1, null);
 		testSort("CheatSorter", a2, sorter1);
         testSort("MySorter", a3, sorter2);
