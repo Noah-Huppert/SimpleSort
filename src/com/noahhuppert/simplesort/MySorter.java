@@ -1,7 +1,7 @@
 package com.noahhuppert.simplesort;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
 
 // sorter that needs to be completed by YOU, trying to figure out how to sort an array
 public class MySorter extends SimpleSorterAbstract {
@@ -36,8 +36,9 @@ public class MySorter extends SimpleSorterAbstract {
 
         int[] result = new int[sorted.size()];
 
-        for(int i = sorted.size(); i > sorted.size(); i--){
-            System.out.println(i);
+        Collections.reverse(sorted);
+
+        for(int i = 0; i < sorted.size(); i++){
             result[i] = sorted.get(i);
         }
 

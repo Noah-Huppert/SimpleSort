@@ -40,9 +40,17 @@ public class SimpleSortMain {
 		System.out.println("Is sorted? " + isSorted(a));
 		if (sorter != null) {
 			System.out.println("Testing sorter " + sorter.getClass().getName());
+
+
+            long before = System.currentTimeMillis();
+
 			a = sorter.sort(a);
+
+            long after = System.currentTimeMillis();
+
 			printArray(a);
 			System.out.println("Is sorted? " + isSorted(a));
+            System.out.println("Ran in " + (after - before) + "ms");
 
 		}
 	}
@@ -51,13 +59,16 @@ public class SimpleSortMain {
 	public static void main(String[] args) {
 		int[] a1 = {0, 3, 7, 7, 9};
 		int[] a2 = randomArray(10);
-		int[] a3 = randomArray(10);
+        int[] a3 = randomArray(10);
+        int[] a4 = randomArray(10);
 		
 		SimpleSorterAbstract sorter1 = new CheatSorter();
-		SimpleSorterAbstract sorter2 = new MySorter();
+        SimpleSorterAbstract sorter2 = new MySorter();
+        SimpleSorterAbstract sorter3 = new BetterSorter();
 		testSort("Static array", a1, null);
 		testSort("CheatSorter", a2, sorter1);
-		testSort("MySorter", a3, sorter2);
+        testSort("MySorter", a3, sorter2);
+        testSort("BetterSorter", a4, sorter3);
 	}
 
 }
